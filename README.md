@@ -32,39 +32,125 @@ Publish the website in the LocalHost.
 ## PROGRAM:
 ###### home.html
 ```
-<!-- myapp/templates/myapp/home.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My App Home</title>
-    <link rel="stylesheet" href="C:/Users/admin/Desktop/web_dev/bookcover/bcover/static/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Cover</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 210mm;
+            height: 297mm;
+            font-family: "Times New Roman", serif;
+            background-color: black;
+            color: rgb(19, 9, 9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cover-container {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(64, 58, 58, 0.8);
+        }
+
+        .top-section {
+            text-align: left;
+        }
+
+        .expert-insight {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 4px solid orange;
+            padding-left: 8px;
+            margin-bottom: 10px;
+        }
+
+        .book-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .bottom-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .bottom-section .details {
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .edition {
+            color: orange;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .author {
+            color: rgb(72, 154, 88);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .author-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 10%;
+            border: 2px solid white;
+        }
+
+        .publisher-logo {
+            max-width: 100px;
+        }
+    </style>
 </head>
 <body>
-    <h1>THE BOOK</h1>
-    <img src="C:/Users/admin/Desktop/web_dev/bookcover/bcover/static/images/bookcover.png" alt="Book Cover Image" style="height: 500px;" >
-    <p>An Anonymous Life story</p>
+    <div class="cover-container">
+        <div class="top-section">
+            <div class="expert-insight">Expert Insight</div>
+            <div class="book-title">Responsive Web Design with HTML5 and CSS</div>
+            <div class="subtitle">Develop future-proof responsive websites using the latest HTML5 and CSS techniques</div>
+        </div>
+        <div class="bottom-section">
+            <div class="details">
+                <div class="edition">Limited Edition</div>
+                <div class="author">SITHARTH B S</div>
+            </div>
+            <div>
+                <img src="me.jpg" alt="Author Photo" class="author-photo">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 ```
 
-style.css
-```
-
-body {
-    background-color: #f0f0f0;
-    color: #870259;
-    font-family: Arial, sans-serif;
-}
-
-h1 {
-    color: #ff0090;
-}
-```
-
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/c13e1410-0331-40b5-93a3-567258c33ab3)
+![Screenshot 2025-05-26 212537](https://github.com/user-attachments/assets/43ce3ed2-d679-4c7a-aa06-a62e41e9c569)
+
 
 
 
